@@ -70,8 +70,11 @@ export function ActorRatingCarousel({
             />
             {actorCount > 0 && (
               <div className="flex flex-col items-center gap-1">
-                <span className="text-lg text-white font-medium">
-                  {(avgActorRating ?? 0).toFixed(1)}
+                <span 
+                  className="inline-block text-right text-lg text-white font-medium"
+                  style={{ width: '3ch' }}
+                >
+                  {avgActorRating.toFixed(1)}
                 </span>
                 <span className="text-sm text-neutral-400">
                   {actorCount} rating{actorCount === 1 ? '' : 's'}
