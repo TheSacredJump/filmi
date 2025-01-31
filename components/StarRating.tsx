@@ -105,8 +105,11 @@ export const StarRating = ({
     >
       {[...Array(10)].map((_, i) => renderStar(i))}
       {!readonly && (
-        <span className={`ml-2 ${textSizes[size]} text-neutral-400`}>
-          {hoverRating || rating || '0'}/10
+        <span
+          className={`ml-2 ${textSizes[size]} text-neutral-400 inline-block text-right`}
+          style={{ width: '4ch' }} 
+        >
+          {(hoverRating || rating || 0).toFixed(1)}/10
         </span>
       )}
     </div>
