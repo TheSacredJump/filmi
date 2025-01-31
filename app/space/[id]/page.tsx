@@ -340,7 +340,8 @@ export default function SpacePage() {
             image_url
           )
         `)
-        .eq('actor_name', actor.name);  // filter by this actor’s name
+        .eq('actor_name', actor.name)  // filter by this actor’s name
+        .eq('movies.space_id', space?.id); // filter by this space
   
       if (error) throw error;
   
